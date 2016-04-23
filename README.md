@@ -16,7 +16,9 @@ To automatically compile Kotlin files add `"kotlin"` to `:prep-tasks`
 
 If you want to use a different kotlin-runtime version, also set `:kotlin-compiler-version`
 
-If you want to use this in the Cursive REPL you need to add `:profiles {:repl {:dependencies [[org.jetbrains.kotlin/kotlin-compiler "1.0.1-2"]]}}` to the project. This is work around for a bug, and is being worked on.
+If you want to use this in the Cursive REPL you need to add 
+`:profiles {:repl {:dependencies [[org.jetbrains.kotlin/kotlin-compiler "1.0.1-2"]]}}` 
+to the project. This is work around for a bug, and is being worked on.
 
 ## License
 
