@@ -4,7 +4,7 @@ A Leiningen plugin to compile Kotlin code.
 
 ## Usage
 
-Add `[lein-kotlin "0.0.1"]` to `:plugins`
+Add `[lein-kotlin "0.0.2"]` to `:plugins`
 
 Add `[org.jetbrains.kotlin/kotlin-runtime "1.0.1-2"]` to `:dependencies`
 
