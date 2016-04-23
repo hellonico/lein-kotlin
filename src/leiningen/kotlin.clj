@@ -7,7 +7,7 @@
   [project & args]
   (let [ksrc (:kotlin-source-path project)
         target (or (:compile-path project) "target")
-        version (or (:kotlin-compiler-version) "1.0.1-2")
+        version (or (:kotlin-compiler-version project) "1.0.1-2")
         p (merge-profiles project [{:dependencies [['org.jetbrains.kotlin/kotlin-compiler version]]}])
         p (dissoc p :prep-tasks)]
     (when ksrc
