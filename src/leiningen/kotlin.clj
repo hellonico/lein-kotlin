@@ -17,4 +17,4 @@
         `(do
            (org.jetbrains.kotlin.cli.jvm.K2JVMCompiler/main
              ; (into-array ["jvmTarget" jvmTarget "-cp" (System/getProperty "java.class.path") "-d" ~target ~ksrc])))))))
-             (into-array ["-cp" (System/getProperty "java.class.path") "-d" ~target ~ksrc])))))))
+             (into-array [ "-no-stdlib" "-Xskip-runtime-version-check" "-cp" (System/getProperty "java.class.path") "-d" ~target ~ksrc])))))))
