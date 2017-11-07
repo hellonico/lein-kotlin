@@ -1,4 +1,4 @@
-(defproject lein-kotlin "0.0.2.0"
+(defproject hellonico/lein-kotlin "0.0.2.1"
   :description "A Leiningen plugin to compile Kotlin code."
   :url "https://github.com/reutermj/lein-kotlin"
   :license {:name "MIT License"
