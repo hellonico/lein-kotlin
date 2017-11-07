@@ -7,7 +7,8 @@
   [project & args]
   (let [ksrc (:kotlin-source-path project)
         target (or (:compile-path project) "target")
-        version (or (:kotlin-compiler-version project) "1.0.1-2")
+        jvmTarget (or (:kotlin-java-version project) "1.8")
+        version (or (:kotlin-compiler-version project) "1.1.4-3")
         p (merge-profiles project [{:dependencies [['org.jetbrains.kotlin/kotlin-compiler version]]}])
         p (dissoc p :prep-tasks)]
     (when ksrc
@@ -15,4 +16,5 @@
         p
         `(do
            (org.jetbrains.kotlin.cli.jvm.K2JVMCompiler/main
+             ; (into-array ["jvmTarget" jvmTarget "-cp" (System/getProperty "java.class.path") "-d" ~target ~ksrc])))))))
              (into-array ["-cp" (System/getProperty "java.class.path") "-d" ~target ~ksrc])))))))
